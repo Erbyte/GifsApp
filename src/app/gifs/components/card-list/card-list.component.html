@@ -1,0 +1,11 @@
+<div class="row">
+  <div *ngFor="let gif of gifs" class="col-lg-4 col-md-6 col-sm-12 col-12">
+    <div class="card mb-2 text-center bg-dark">
+      <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
+
+      <div class="card-img-overlay d-flex" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 95%);">
+        <p class="card-text d-flex align-items-end text-light text-center" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{gif.title}}</p>
+      </div>
+    </div>
+  </div>
+</div>
