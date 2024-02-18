@@ -49,7 +49,7 @@ export class GifsService {
   private loadTrending(): void {
     const params = new HttpParams()
       .set('api_key', this.apiKey)
-      .set('limit', '10');
+      .set('limit', '25');
 
     this.http.get<SearchResponse>(`${this.serviceUrl}/trending`, { params })
       .subscribe(resp => {
@@ -64,7 +64,7 @@ export class GifsService {
 
     const params = new HttpParams()
       .set('api_key', this.apiKey)
-      .set('limit', '10')
+      .set('limit', '25')
       .set('q', tag)
 
     this.http.get<SearchResponse>(`${this.serviceUrl}/search`, { params })
